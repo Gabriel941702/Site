@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %} Login {% endblock %}
+
+
+
+{% block content %}
+     {{ super() }}
+<h2><p style="text-align:center;color: aliceblue">Login</p></h2>
+
+  <form method="post" style="width: 50%; margin-left:375px; margin-top: 200px;">
+     <input type="text" name = 'username' class="form-control mb-3 mt3" placeholder="username">
+      <input type="password" class="form-control" placeholder="password">
+      <button type="submit" class="btn btn-danger mt-3">Login</button>
+
+  </form>
+
+<img src="/static/images/wish.png" class="rounded float-start" alt="...">
+{% endblock %}

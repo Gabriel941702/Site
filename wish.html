@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Wish {% endblock %}
+{% block content %}
+
+    <h1> <p style="text-align: center; color: aliceblue;">Hello {{ my_name }}</p> </h1>
+
+ <h1> <p style="text-align:center;color: aliceblue">Dont lose a chance to win free skin</p> </h1>
+
+ <form method="post" style="width: 50%; margin-left:375px; margin-top: 100px;">
+     <div class="form-group">
+     <input type="text" name = 'nickname' class="form-control mb-3 mt3" placeholder="nickname">
+      <input type="text" name = 'server' class="form-control mb-3 mt3" placeholder="server">
+     <input type="text" name = 'champion' class="form-control mb-3 mt3" placeholder="champion">
+      <input type="text" name = 'skin' class="form-control mb-3 mt3" placeholder="skin">
+</div>
+
+     {% with messages=get_flashed_messages(with_categories=true) %}
+      {% for cat, msg in messages %}
+     <p class="{{cat}}">{{msg}}</p>
+     {% endfor %}
+     {% endwith %}
+      <button type="submit" class="btn btn-danger mt-3">Wish</button>
+
+     <img src="/static/images/lee.png" class="rounded float-start" alt="...">
+
+  </form>
+
+
+{% endblock %}
